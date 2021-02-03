@@ -1,0 +1,362 @@
+@font-face{
+    font-family: star jedi;
+    src: url(Starjedi.ttf)
+}
+
+
+html{
+    background-color: #121212;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    color:white;
+}
+
+body{
+    margin: 0;
+}
+
+section{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+p{
+    color: #b3b3b3;
+}
+
+header, h2, h3, h4{
+    color: white;
+}
+
+/*HEADER*/
+
+@keyframes aparicion{
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 100%;
+    }
+}
+
+header{
+    top: 0;
+    left: 0;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    background-image: url(pexels-francesco-ungaro-998641.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+header > *{
+    animation-name: aparicion;
+    animation-duration: 3s;
+    animation-iteration-count: initial;
+}
+
+h1{
+    font-size: 3rem;
+    font-family: star jedi;
+    color: #ffe81f;
+
+}
+
+header > *{
+    width: 50%;
+    text-align: center;
+    overflow: auto;
+}
+
+
+header p{
+    color: white;
+}
+
+button{
+    border-radius: 10px;
+    outline: none;
+    padding: 1rem;
+}
+
+.watch-trailer{
+    font-size: 1.75rem;
+    background: none;
+    color: #ffe81f;
+    border: 2px solid #ffe81f;
+}
+
+.watch-trailer:hover{
+    background-color:  #ffe81f;
+    color: #202020;
+}
+
+
+/*MODS*/
+
+.mod{
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.title-container{
+    background-color: #202020;
+    border-radius: 10px;
+    padding: 1.2rem;
+    width: 25%;
+    align-items: center;
+}
+
+.title-container > *{
+    padding: 1.5rem;
+}
+
+.title-container p{
+    text-align: justify;
+}
+
+.video-container{
+    width: 50%;
+}
+
+.video-mod{
+    width: 100%;
+}
+
+.mod-button{
+    border: 2px solid red;
+    background: none;
+    outline: none;
+    color: red;
+    font-size: 1.5rem;
+    width: 50%;
+    letter-spacing: 0.2rem;
+}
+
+.mod-button:hover{
+    background-color: red;
+    color: white;
+}
+
+h2{
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+b{
+    color: white;
+}
+
+
+/*REDES*/
+
+.cards{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card{
+    width: 25%;
+    background-color: #202020;
+    border-radius: 10px;
+    margin: 1rem;
+}
+
+h3{
+    font-size: 2.5rem;
+}
+
+.icono-redes{
+    padding: 1.25rem;
+    font-size: 8rem;
+    transition: all 0.75s;
+}
+
+.icono-redes:hover{
+    transform: rotate(360deg);
+    transition-duration: 1s;
+}
+
+.fa-patreon{
+    color: #f96854;
+}
+
+.fa-youtube{
+    color: #c4302b;
+}
+
+.fa-discord{
+    color: #7289da;
+}
+
+.info-redes{
+    padding: 1.5rem;
+}
+
+.info-redes > *{
+    padding: 0.5rem;
+}
+
+/*FOOTER*/
+
+.container-footer{
+    display: flex;
+    height: 12vh;
+    background-color: #202020;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container-footer > *{
+    padding: 0.25rem 0;
+}
+
+h4{
+    margin-top: 0rem;
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.iconos-pers{
+    font-size: 2rem;
+}
+
+.iconos-pers > *{
+    padding: 1rem;
+    margin: 0 0.5rem;
+    transition: all 1s;
+}
+
+.fa-linkedin:hover{
+    transform: scale(1.15);
+    background-color: white;
+    border-radius: 50%;
+    color: #0e76a8;
+}
+
+.fa-envelope:hover{
+    transform: scale(1.15);
+    background-color: white;
+    border-radius: 50%;
+    color: #cc5500;
+}
+
+.fa-github:hover{
+    transform: scale(1.15);
+    background-color: white;
+    border-radius: 50%;
+    color: #333;
+}
+
+/*MEDIA*/
+
+@media (max-width: 1000px){
+    section{
+        height: 66vh;
+    }
+    .cards{
+        align-items: flex-start;
+    }
+    h2{
+        font-size: 2rem;
+    }
+    .title-container{
+        width: 75%;
+    }
+    .title-container p{
+        display: none;
+    }
+    .video-container{
+        display: none;
+    }
+    .mod-button{
+        font-size: 1.25rem;
+    }
+    h3{
+        font-size: 2.5rem;
+    }
+    .icono-redes{
+        font-size: 7rem;
+    }
+    .info-redes{
+        display: none;
+    }
+
+    .watch-trailer{
+        align-items: flex-end;
+    }
+}
+
+@media (max-width: 750px){
+    .cards{
+        align-items: flex-start;
+    }
+    .card{
+        width: 50%;
+    }
+    h1{
+        font-size: 2.25rem;
+    }
+}
+
+@media (max-width: 700px){
+    .mod-button{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 550px){
+    h1{
+        font-size: 2rem;
+    }
+    header{
+        font-size: 1rem;
+    }
+    .watch-trailer{
+        font-size: 1.25rem;
+    }
+    h3{
+        font-size: 1.5rem;
+    }
+    .icono-redes{
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 500px){
+    h2{
+        font-size: 1.5rem;
+    }
+    .title-container{
+        width: 80%;
+        height: 50%;
+    }
+}
+
+@media (max-width: 420px){
+    header > *{
+        width: 60%;
+    }
+    h1{
+        font-size: 1.5rem;
+    }
+    header{
+        font-size: 0.75rem;
+    }
+    .watch-trailer{
+        font-size: 1rem;
+    }
+}
