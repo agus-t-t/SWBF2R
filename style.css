@@ -51,7 +51,7 @@ header{
     justify-content: center;
     align-items: center;
     font-size: 1.3rem;
-    background-image: url(pexels-francesco-ungaro-998641.jpg);
+    background-image: url(images/header/pexels-francesco-ungaro-998641.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -98,7 +98,6 @@ button{
     color: #202020;
 }
 
-
 /*MODS*/
 
 .mod{
@@ -107,10 +106,12 @@ button{
     justify-content: space-around;
     align-items: center;
     width: 100%;
+    background-position: center;
+    background-size: cover;
 }
 
 .title-container{
-    background-color: #202020;
+    background-color: rgba(20, 20, 20, 0.7);
     border-radius: 10px;
     padding: 1.2rem;
     width: 25%;
@@ -134,17 +135,41 @@ button{
 }
 
 .mod-button{
-    border: 2px solid red;
+    border: 2px solid;
     background: none;
     outline: none;
-    color: red;
     font-size: 1.5rem;
     width: 50%;
     letter-spacing: 0.2rem;
 }
 
-.mod-button:hover{
-    background-color: red;
+#purple{
+    border-color: #724491;
+    color: #724491;
+}
+
+#purple:hover{
+    background-color: #724491;
+    color: white;
+}
+
+#green{
+    border-color: #449177;
+    color: #449177;
+}
+
+#green:hover{
+    background-color: #449177;
+    color: white;
+}
+
+#orange{
+    border-color: #916d44;
+    color: #916d44;
+}
+
+#orange:hover{
+    background-color: #916d44;
     color: white;
 }
 
@@ -155,6 +180,18 @@ h2{
 
 b{
     color: white;
+}
+
+#remaster{
+    background-image: url(images/mods/Republic_Fleet.png);
+}
+
+#rezzed{
+    background-image: url(images/mods/Star_Wars_Battlefront_II_2005_Screenshot_2019.01.10_-_22.51.09.36.png);
+}
+
+#ism{
+    background-image: url(images/mods/BattlefrontII_2018-05-16_16-18-53.png);
 }
 
 
@@ -209,6 +246,14 @@ h3{
     padding: 0.5rem;
 }
 
+#izq{
+    text-align: left;
+}
+
+#der{
+    text-align: right;
+}
+
 /*FOOTER*/
 
 .container-footer{
@@ -238,6 +283,7 @@ h4{
     padding: 1rem;
     margin: 0 0.5rem;
     transition: all 1s;
+    border-radius: 10px;
 }
 
 .fa-linkedin:hover{
@@ -264,7 +310,7 @@ h4{
 /*MEDIA*/
 
 @media (max-width: 1000px){
-    section{
+    section, .mod{
         height: 66vh;
     }
     .cards{
@@ -275,9 +321,6 @@ h4{
     }
     .title-container{
         width: 75%;
-    }
-    .title-container p{
-        display: none;
     }
     .video-container{
         display: none;
@@ -334,6 +377,9 @@ h4{
     .icono-redes{
         font-size: 4rem;
     }
+    .title-container p{
+        display: none;
+    }
 }
 
 @media (max-width: 500px){
@@ -342,7 +388,12 @@ h4{
     }
     .title-container{
         width: 80%;
-        height: 50%;
+    }
+    .watch-trailer{
+        font-size: 1.25rem;
+    }
+    .mod-button{
+        padding: 1rem;
     }
 }
 
