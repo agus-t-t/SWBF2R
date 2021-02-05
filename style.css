@@ -15,6 +15,37 @@ body{
     margin: 0;
 }
 
+.navbar{
+    display: flex;
+    height: 5vh;
+    background-color: #202020;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-elem{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: flex-end;
+    font-weight: 600
+}
+
+.main{
+    margin-left: 5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    margin: 0 7rem;
+}
+
 section{
     display: flex;
     height: 100vh;
@@ -66,7 +97,6 @@ h1{
     font-size: 3rem;
     font-family: star jedi;
     color: #ffe81f;
-
 }
 
 header > *{
@@ -80,6 +110,10 @@ header p{
     color: white;
 }
 
+header .container{
+    padding: 1.75rem;
+}
+
 button{
     border-radius: 10px;
     outline: none;
@@ -91,10 +125,12 @@ button{
     background: none;
     color: #ffe81f;
     border: 2px solid #ffe81f;
+    transition: all 0.5s;
 }
 
 .watch-trailer:hover{
     background-color:  #ffe81f;
+    box-shadow: 0px 0px 13px 13px #f5e76a;
     color: #202020;
 }
 
@@ -116,6 +152,11 @@ button{
     padding: 1.2rem;
     width: 25%;
     align-items: center;
+    box-shadow: -10px 10px 10px 8px black;
+}
+
+#rezzed .title-container {
+    box-shadow: 10px 10px 10px 8px black;
 }
 
 .title-container > *{
@@ -141,6 +182,7 @@ button{
     font-size: 1.5rem;
     width: 50%;
     letter-spacing: 0.2rem;
+    transition: all 1s;
 }
 
 #purple{
@@ -212,7 +254,7 @@ b{
 }
 
 h3{
-    font-size: 2.5rem;
+    font-size: 3rem;
 }
 
 .icono-redes{
@@ -321,7 +363,13 @@ h4{
     }
     .title-container{
         width: 75%;
+        box-shadow: 0px 0px 10px 10px black;
     }
+
+    #rezzed .title-container{
+        box-shadow: 0px 0px 10px 10px black;
+    }
+
     .video-container{
         display: none;
     }
@@ -344,20 +392,36 @@ h4{
 }
 
 @media (max-width: 750px){
-    .cards{
-        align-items: flex-start;
-    }
-    .card{
-        width: 50%;
-    }
     h1{
         font-size: 2.25rem;
     }
 }
 
 @media (max-width: 700px){
+    section{
+        height: auto;
+        padding: 2rem;
+    }
+    .cards{
+        align-items: flex-start;
+    }
     .mod-button{
         font-size: 1rem;
+    }
+    #mod{
+        padding: 0
+    }
+    h3{
+        font-size: 1.5rem;
+    }
+    .icono-redes{
+        font-size: 5.5rem;
+    }
+}
+
+@media (max-width: 600px){
+    .icono-redes{
+        font-size: 5rem;
     }
 }
 
@@ -370,12 +434,6 @@ h4{
     }
     .watch-trailer{
         font-size: 1.25rem;
-    }
-    h3{
-        font-size: 1.5rem;
-    }
-    .icono-redes{
-        font-size: 4rem;
     }
     .title-container p{
         display: none;
@@ -395,9 +453,21 @@ h4{
     .mod-button{
         padding: 1rem;
     }
+    h4{
+        font-size: 1rem;
+    }
+    .iconos-pers{
+        font-size: 1.25rem;
+    }
+    .icono-redes{
+        font-size: 4rem;
+    }
+    h3{
+        font-size: 1.25rem;
+    }
 }
 
-@media (max-width: 420px){
+@media (max-width: 450px){
     header > *{
         width: 60%;
     }
@@ -409,5 +479,27 @@ h4{
     }
     .watch-trailer{
         font-size: 1rem;
+    }
+
+    .icono-redes{
+        font-size: 3rem;
+    }
+    h3{
+        font-size: 1rem;
+    }
+    #redes{
+        padding: 1.5rem 0.5rem;
+    }
+    .card{
+        margin: 0.5rem;
+    }
+}
+
+@media (max-width: 350px){
+    h3{
+        font-size: 0.75rem;
+    }
+    .icono-redes{
+        font-size: 2rem;
     }
 }
