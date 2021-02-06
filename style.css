@@ -3,6 +3,20 @@
     src: url(Starjedi.ttf)
 }
 
+@keyframes pulsacion{
+    0%{
+        transform: scale(1);
+    }
+
+    50%{
+        transform: scale(1.2);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
+
 
 html{
     background-color: #121212;
@@ -13,6 +27,14 @@ html{
 
 body{
     margin: 0;
+}
+
+/*NAVBAR*/
+
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 .navbar{
@@ -40,10 +62,26 @@ body{
 
 ul{
     list-style: none;
+    font-size: 1.25rem;
 }
 
 li{
     margin: 0 7rem;
+}
+
+li:hover{
+    animation-name: pulsacion;
+    animation-iteration-count: infinite;
+    animation-duration: 1.25s;
+}
+
+#burger{
+    display: none;
+}
+
+a{
+    text-decoration: none;
+    color: white;
 }
 
 section{
@@ -351,7 +389,16 @@ h4{
 
 /*MEDIA*/
 
+@media (max-width: 1200px){
+    li{
+        margin: 0 5rem;
+    }
+}
+
 @media (max-width: 1000px){
+    li{
+        margin: 0 3rem;
+    }
     section, .mod{
         height: 66vh;
     }
@@ -392,12 +439,21 @@ h4{
 }
 
 @media (max-width: 750px){
+    li{
+        margin: 0 1.5rem;
+    }
     h1{
         font-size: 2.25rem;
     }
 }
 
 @media (max-width: 700px){
+    li{
+        display: none;
+    }
+    #burger{
+        display: block;
+    }
     section{
         height: auto;
         padding: 2rem;
