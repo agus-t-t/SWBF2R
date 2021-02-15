@@ -43,6 +43,7 @@ nav{
     background-color: #202020;
     align-items: center;
     justify-content: space-between;
+    padding: 0 3rem;
 }
 
 .nav-elem{
@@ -54,7 +55,6 @@ nav{
 }
 
 .main{
-    margin-left: 5rem;
     font-size: 1.5rem;
     font-weight: 500;
     letter-spacing: 3px;
@@ -66,18 +66,24 @@ ul{
 }
 
 li{
-    margin: 0 7rem;
+    height: 100%;
+    padding: 0.6rem 4rem;
+    transition: all 0.5s;
 }
 
 li:hover{
-    animation-name: pulsacion;
-    animation-iteration-count: infinite;
-    animation-duration: 1.25s;
+    background-color: white;
+    color: #202020;
 }
 
 #burger{
     display: none;
-    animation: none;
+    padding: 0;
+}
+
+#burger:hover{
+    background: none;
+    color: white;
 }
 
 a{
@@ -275,6 +281,134 @@ b{
     background-image: url(images/mods/BattlefrontII_2018-05-16_16-18-53.png);
 }
 
+/*GALERIA*/
+
+#galeria{
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+}
+
+.contenedor{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: "img1 img1 img1 img2 img2 img3"
+                "img1 img1 img1 img2 img2 img3"
+                "img6 img6 gallery-button img4 img4 img3"
+                "img6 img6 img7 img4 img4 img9"
+                "img6 img6 img7 img8 img8 img9";
+    height: 90vh;
+    margin: 0;
+    padding: 1rem;
+    background-color: #202020;
+    width: 90vw;
+    border-radius: 10px;
+}
+
+.contenedor .galeria{
+    height: auto;
+    border-radius: 10px;
+}
+
+.blur{
+    height: 100%;
+    border: none;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.75);
+    font-size: 2rem;
+    color: white;
+    border-radius: 10px;
+}
+
+.contenedor .galeria:hover .blur{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 0.5s;
+}
+
+.gallery-button{
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.gallery-button button{
+    height: 100%;
+    width: 100%;
+    font-size: 2rem;
+    background: none;
+    color:white;
+    outline: none;
+    transition: all 1s;
+}
+
+.gallery-button button:hover{
+    background: white;
+    color: #202020;
+}
+
+.contenedor > .img1{
+    grid-area: img1;
+    background-image: url("images/gallery/Lucrehulk.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.contenedor> .img2{
+    grid-area: img2;
+    background-image: url("images/gallery/Yavin_Space_Remaster.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.contenedor > .img3{
+    grid-area: img3;
+    background-image: url("images/gallery/Jango.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.contenedor > .img4{
+    grid-area: img4;
+    background-image: url("images/gallery/Star_Wars_Battlefront_II_2005_Screenshot_2019.01.01_-_20.53.03.05.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.contenedor > .gallery-button{
+    grid-area: gallery-button;
+}
+
+.contenedor > .img6{
+    grid-area: img6;
+    background-image: url("images/gallery/Star_Wars_Battlefront_II_2005_Screenshot_2019.12.17_-_14.46.41.04.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.contenedor > .img7{
+    grid-area: img7;
+    background-image: url("images/gallery/Vader_-_Battlefront_2_Remaster.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.contenedor > .img8{
+    grid-area: img8;
+    background-image: url("images/gallery/BattlefrontII_2018-01-29_23-15-46.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.contenedor > .img9{
+    grid-area: img9;
+    background-image: url("images/gallery/Star_Wars_Battlefront_II_2005_Screenshot_2019.10.07_-_13.05.41.05.png");
+    background-size: cover;
+    background-position: center;
+}
+
 
 /*REDES*/
 
@@ -390,18 +524,9 @@ h4{
 
 /*MEDIA*/
 
-@media (max-width: 1200px){
-    li{
-        margin: 0 5rem;
-    }
-}
-
 @media (max-width: 1000px){
     html{
         font-size: 14px;
-    }
-    li{
-        margin: 0 3rem;
     }
     section, .mod{
         height: 50vh;
@@ -430,22 +555,16 @@ h4{
     }
 }
 
-@media (max-width: 750px){
-    li{
-        margin: 0 1.5rem;
-    }
-}
-
-@media (max-width: 700px){
-    .main{
-        margin-left: 3rem;
-    }
+@media (max-width: 900px){
     li{
         display: none;
     }
     #burger{
         display: block;
     }
+}
+
+@media (max-width: 700px){
     section{
         height: auto;
         padding: 2rem;
@@ -466,7 +585,7 @@ h4{
 
 @media (max-width: 600px){
     html{
-        font-size: 10px;
+        font-size: 12px;
     }
 }
 
