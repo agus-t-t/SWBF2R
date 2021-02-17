@@ -48,7 +48,8 @@ nav{
     background-color: #404040;
     align-items: center;
     justify-content: space-between;
-    padding: 0 3rem;
+    padding-left: 3rem;
+    position: relative;
 }
 
 .nav-elem{
@@ -56,7 +57,20 @@ nav{
     flex-direction: row;
     width: 50%;
     justify-content: flex-end;
-    font-weight: 600
+    font-weight: 600;
+    margin: 0;
+    height: 100%;
+}
+
+.nav-elem a{
+    display: flex;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+.nav-elem a:hover{
+    color: #202020;
+    background-color: white;
 }
 
 .main{
@@ -65,25 +79,39 @@ nav{
     letter-spacing: 3px;
 }
 
+.main:hover a{
+    animation-name: amarillo;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes amarillo{
+    0%{
+        color: white;
+    }
+    50%{
+        color: #ffe81f;
+    }
+    100%{
+        color: white;
+    }
+}
+
 ul{
     list-style: none;
     font-size: 1.25rem;
 }
 
 li{
-    height: 100%;
-    padding: 0.6rem 4rem;
-    transition: all 0.5s;
-}
-
-li:hover{
-    background-color: white;
-    color: #404040;
+    height: auto;
+    padding: 0 4rem;
 }
 
 #burger{
     display: none;
     padding: 0;
+    position: absolute;
+    right: 3rem;
 }
 
 #burger:hover{
@@ -288,11 +316,6 @@ b{
 
 /*GALERIA*/
 
-#galeria{
-    align-items: center;
-    padding: 2rem;
-}
-
 .contenedor{
     display: grid;
     gap: 1rem;
@@ -335,6 +358,7 @@ b{
 .contenedor .galeria:hover .blur{
     display: flex;
     transition-duration: 0.5s;
+    cursor: pointer;
 }
 
 .gallery-button{
@@ -567,21 +591,24 @@ h4{
 /*MEDIA*/
 
 @media (max-width: 1200px){
+    li{
+        padding: 0.6rem 3rem;
+    }
     .contenedor .galeria:hover .blur{
         display: none;
     }
-
+    
     .contenedor{
-    grid-template-areas: "img1 img1 img1 img2 img2 img2"
-                "img1 img1 img1 img2 img2 img2"
-                "img1 img1 img1 img4 img4 img4"
-                "img6 img6 img6 img4 img4 img4"
-                "img6 img6 img6 img4 img4 img4";
-                 }
+        grid-template-areas: "img1 img1 img1 img2 img2 img2"
+        "img1 img1 img1 img2 img2 img2"
+        "img1 img1 img1 img4 img4 img4"
+        "img6 img6 img6 img4 img4 img4"
+        "img6 img6 img6 img4 img4 img4";
+    }
     .gallery-button, .img3, .img7, .img8, .img9{
         display: none;
     }
-
+    
     .responsive-button button{
         display: flex;
     }
@@ -624,11 +651,46 @@ h4{
 }
 
 @media (max-width: 900px){
-    li{
-        display: none;
+    .navbar{
+        padding: 0 3rem;
     }
     #burger{
         display: block;
+    }
+    li{
+        font-size: 1.75rem;
+        padding: 0;
+        height: auto;
+    }
+    #burger{
+        font-size: 1.25rem;
+    }
+    .nav-elem{
+        margin: 0;
+        position: absolute;
+        right: 0px;
+        height: 95vh;
+        top: 5vh;
+        display: flex;
+        flex-direction: column-reverse;
+        width: 45%;
+        align-items: center;
+        justify-content: space-around;
+        background-color: #202020;
+        padding: 0;
+        transform: translateX(100%);
+    }
+    li:hover{
+        background-color: #202020;
+        color: white;
+    }
+
+    .main:hover a{
+        animation: none;
+    }
+    
+    .main a:checked {
+        background-color: #404040;
     }
 }
 
@@ -673,7 +735,7 @@ h4{
                             "img6 img6"
                             "img6 img6";
 
-                 }
+                 
     }
 
     .responsive-button button{
@@ -743,6 +805,9 @@ h4{
     }
     h2{
         font-size: 2.5rem;
+    }
+    .nav-elem{
+        width: 100%;
     }
 }
 
