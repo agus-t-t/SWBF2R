@@ -207,6 +207,59 @@ h1{
     grid-row: span 3;
 }
 
+/*FOOTER*/
+
+.container-footer{
+    display: flex;
+    height: 12vh;
+    background-color: #202020;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container-footer > *{
+    padding: 0.25rem 0;
+}
+
+h4{
+    margin-top: 0rem;
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.iconos-pers{
+    font-size: 2rem;
+}
+
+.iconitos{
+    padding: 1rem;
+    margin: 0 0.5rem;
+    transition: all 1s;
+    border-radius: 10px;
+}
+
+ .fa-linkedin:hover{
+    transform: scale(1.15);
+    background-color: white;
+    border-radius: 50%;
+    color: #0e76a8;
+}
+
+.fa-envelope:hover{
+    transform: scale(1.15);
+    background-color: white;
+    border-radius: 50%;
+    color: #cc5500;
+}
+
+.fa-github:hover{
+    transform: scale(1.15);
+    background-color: white;
+    border-radius: 50%;
+    color: #333;
+}
+
 @media (max-width: 1200px){
     h1{
         font-size: 3rem;
