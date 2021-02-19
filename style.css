@@ -83,6 +83,8 @@ nav{
     animation-name: amarillo;
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
 }
 
 @keyframes amarillo{
@@ -122,6 +124,8 @@ li{
 a{
     text-decoration: none;
     color: white;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
 }
 
 section{
@@ -263,6 +267,11 @@ button{
     transition: all 1s;
 }
 
+a .mod-button{
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+}
+
 #purple{
     border-color: #724491;
     color: #724491;
@@ -347,6 +356,10 @@ b{
     justify-content: center;
 }
 
+.blur p{
+    color: white;
+}
+
 .blur:hover{
     background-color: rgba(0, 0, 0, 0.75);
     font-size: 2rem;
@@ -402,11 +415,14 @@ b{
     animation-duration: 2s;
     animation-iteration-count: infinite;
     display: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
 }
 
 .responsive-button button p{
     font-size: 2rem;
     margin: 0.5rem;
+    color: white;
 }
 
 @keyframes latente{
@@ -500,6 +516,8 @@ h3{
     padding: 1.25rem;
     font-size: 8rem;
     transition: all 0.75s;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
 }
 
 .icono-redes:hover{
@@ -565,6 +583,8 @@ h4{
     margin: 0 0.5rem;
     transition: all 1s;
     border-radius: 10px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
 }
 
  .fa-linkedin:hover{
@@ -750,7 +770,7 @@ h4{
     }
 
     .responsive-button button{
-        padding: 0;
+        padding: 1.5rem;
     }
 
     .responsive-button button p{
@@ -800,22 +820,10 @@ h4{
     h1{
         font-size: 2.5rem;
     }
-    html{
-        font-size: 11px;
-    }
     h2{
         font-size: 2.5rem;
     }
     .nav-elem{
         width: 100%;
-    }
-}
-
-@media (max-width: 400px){
-    h1{
-        font-size: 2rem;
-    }
-    html{
-        font-size: 10px;
     }
 }
