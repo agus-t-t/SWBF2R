@@ -208,6 +208,8 @@ button{
     color: #ffe81f;
     border: 2px solid #ffe81f;
     transition: all 0.5s;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
 }
 
 .watch-trailer:hover{
@@ -611,6 +613,19 @@ h4{
 /*MEDIA*/
 
 @media (max-width: 1200px){
+    .main:hover a{
+        animation: none;
+    }
+    .watch-trailer{
+        background-color: #ffe81f;
+        color: #202020;
+        transition: all 0s;
+    }
+    .watch-trailer:hover{
+        background-color:  #ffe81f;
+        box-shadow: none;
+        color: #202020;
+    }
     li{
         padding: 0.6rem 3rem;
     }
@@ -631,6 +646,21 @@ h4{
     
     .responsive-button button{
         display: flex;
+    }
+
+    #purple{
+        background-color: #724491;
+        color: white;
+    }
+    
+    #green{
+        background-color: #449177;
+        color: white;
+    }
+    
+    #orange{
+        background-color: #916d44;
+        color: white;
     }
 }
 
@@ -665,8 +695,8 @@ h4{
     }
 
     .responsive-button button p{
-        font-size: 2rem;
-        margin: 0.75rem;
+        font-size: 2.25rem;
+        margin: 1rem;
     }
 }
 
@@ -720,8 +750,8 @@ h4{
     }
     
     .responsive-button button{
-        padding: 2.25rem;
-        font-size: 1.5rem;
+        padding: 1.75rem;
+        font-size: 1.25rem;
     }
 }
 
@@ -759,8 +789,8 @@ h4{
     }
 
     .responsive-button button{
-        padding: 2rem;
-        font-size: 1.25rem;
+        padding: 1rem;
+        font-size: 1rem;
     }
 }
 
@@ -825,5 +855,20 @@ h4{
     }
     .nav-elem{
         width: 100%;
+    }
+}
+
+@media (max-width: 400px){
+    html{
+        font-size: 11px;
+    }
+    h1{
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 300px){
+    html{
+        font-size: 10px;
     }
 }
