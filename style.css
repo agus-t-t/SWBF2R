@@ -496,6 +496,10 @@ b{
 
 /*REDES*/
 
+#redes{
+    padding: 2rem;
+}
+
 .cards{
     display: flex;
     width: 100%;
@@ -564,6 +568,7 @@ h3{
     text-align: center;
     flex-direction: column;
     justify-content: center;
+    padding: 1rem;
 }
 
 .container-footer > *{
@@ -571,9 +576,8 @@ h3{
 }
 
 h4{
-    margin-top: 0rem;
     font-size: 1.25rem;
-    margin: 0;
+    margin: 0.5rem 0;
 }
 
 .iconos-pers{
@@ -610,9 +614,18 @@ h4{
     color: #333;
 }
 
+.separador{
+    width: 25%;
+    padding: 0;
+}
+
 /*MEDIA*/
 
 @media (max-width: 1200px){
+    #redes{
+        padding: 0rem;
+    }
+
     .main:hover a{
         animation: none;
     }
@@ -742,6 +755,10 @@ h4{
     .main a:checked {
         background-color: #404040;
     }
+
+    .separador{
+        width: 40%;
+    }
 }
 
 @media (max-width: 768px){
@@ -792,6 +809,10 @@ h4{
         padding: 1rem;
         font-size: 1rem;
     }
+
+    #redes{
+        padding: 2rem;
+    }
 }
 
 @media (max-width: 600px){
@@ -821,6 +842,12 @@ h4{
 @media (max-width: 500px){
     .title-container{
         width: 60%;
+    }
+    #redes{
+        padding: 1rem;
+    }
+    .separador{
+        width: 50%;
     }
 }
 

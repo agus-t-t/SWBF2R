@@ -216,6 +216,7 @@ h1{
     text-align: center;
     flex-direction: column;
     justify-content: center;
+    padding: 1rem;
 }
 
 .container-footer > *{
@@ -223,9 +224,8 @@ h1{
 }
 
 h4{
-    margin-top: 0rem;
     font-size: 1.25rem;
-    margin: 0;
+    margin: 0.5rem 0;
 }
 
 .iconos-pers{
@@ -237,6 +237,8 @@ h4{
     margin: 0 0.5rem;
     transition: all 1s;
     border-radius: 10px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
 }
 
  .fa-linkedin:hover{
@@ -259,6 +261,13 @@ h4{
     border-radius: 50%;
     color: #333;
 }
+
+.separador{
+    width: 25%;
+    padding: 0;
+}
+
+/*MEDIA*/
 
 @media (max-width: 1200px){
     h1{
@@ -318,6 +327,10 @@ h4{
     .main a:checked {
         background-color: #404040;
     }
+
+    .separador{
+        width: 40%;
+    }
 }
 
 @media (max-width: 768px){
@@ -339,5 +352,8 @@ h4{
 @media (max-width: 500px){
     .galeria{
         grid-template-columns: repeat(1, 1fr);
+    }
+    .separador{
+        width: 50%;
     }
 }
