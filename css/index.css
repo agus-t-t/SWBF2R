@@ -19,9 +19,9 @@
 
 html{
     background-color: #121212;
+    color:white;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 16px;
-    color:white;
     scroll-behavior: smooth;
 }
 
@@ -33,107 +33,19 @@ button{
     cursor: pointer;
 }
 
-/*NAVBAR*/
-
-nav{
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1;
-}
-
-.navbar{
-    display: flex;
-    height: 5vh;
-    background-color: #404040;
-    align-items: center;
-    justify-content: space-between;
-    padding-left: 3rem;
-    position: relative;
-}
-
-.nav-elem{
-    display: flex;
-    flex-direction: row;
-    width: 50%;
-    justify-content: flex-end;
-    font-weight: 600;
-    margin: 0;
-    height: 100%;
-}
-
-.nav-elem a{
-    display: flex;
-    align-items: center;
-    transition: all 0.5s;
-}
-
-.nav-elem a:hover{
-    color: #202020;
-    background-color: white;
-}
-
-.main{
-    font-size: 1.5rem;
-    font-weight: 500;
-    letter-spacing: 3px;
-}
-
-.main:hover a{
-    animation-name: amarillo;
-    animation-duration: 1.5s;
-    animation-iteration-count: infinite;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    -webkit-tap-highlight-color: transparent;
-}
-
-@keyframes amarillo{
-    0%{
-        color: white;
-    }
-    50%{
-        color: #ffe81f;
-    }
-    100%{
-        color: white;
-    }
-}
-
-ul{
-    list-style: none;
-    font-size: 1.25rem;
-}
-
-li{
-    height: auto;
-    padding: 0 4rem;
-}
-
-#burger{
-    display: none;
-    padding: 0;
-    position: absolute;
-    right: 3rem;
-}
-
-#burger:hover{
-    background: none;
-    color: white;
-}
-
 a{
-    text-decoration: none;
     color: white;
+    text-decoration: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-tap-highlight-color: transparent;
 }
 
 section{
+    align-items: center;
     display: flex;
     height: 100vh;
     justify-content: center;
     text-align: center;
-    align-items: center;
 }
 
 p{
@@ -157,34 +69,34 @@ header, h2, h3, h4{
 }
 
 header{
-    top: 0;
-    left: 0;
-    display: flex;
-    height: 100vh;
-    justify-content: center;
     align-items: center;
-    font-size: 1.3rem;
-    background-image: url(images/header/pexels-francesco-ungaro-998641.jpg);
+    background-image: url(images/index/header/pexels-francesco-ungaro-998641.jpg);
     background-position: center;
     background-size: cover;
+    display: flex;
+    font-size: 1.3rem;
+    height: 100vh;
+    justify-content: center;
+    left: 0;
+    top: 0;
 }
 
 header > *{
-    animation-name: aparicion;
     animation-duration: 3s;
     animation-iteration-count: initial;
+    animation-name: aparicion;
 }
 
 h1{
+    color: #ffe81f;
     font-size: 3rem;
     font-family: star jedi;
-    color: #ffe81f;
 }
 
 header > *{
-    width: 50%;
-    text-align: center;
     overflow: auto;
+    text-align: center;
+    width: 50%;
 }
 
 
@@ -203,10 +115,10 @@ button{
 }
 
 .watch-trailer{
-    font-size: 1.75rem;
     background: none;
-    color: #ffe81f;
     border: 2px solid #ffe81f;
+    color: #ffe81f;
+    font-size: 1.75rem;
     transition: all 0.5s;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-tap-highlight-color: transparent;
@@ -221,22 +133,22 @@ button{
 /*MODS*/
 
 .mod{
-    height: 100vh;
-    display: flex;
-    justify-content: space-around;
     align-items: center;
-    width: 100%;
     background-position: center;
     background-size: cover;
+    display: flex;
+    height: 100vh;
+    justify-content: space-around;
+    width: 100%;
 }
 
 .title-container{
+    align-items: center;
     background-color: rgba(20, 20, 20, 0.7);
     border-radius: 10px;
+    box-shadow: -10px 10px 10px 8px black;
     padding: 1.2rem;
     width: 25%;
-    align-items: center;
-    box-shadow: -10px 10px 10px 8px black;
 }
 
 #rezzed .title-container {
@@ -260,13 +172,13 @@ button{
 }
 
 .mod-button{
-    border: 2px solid;
     background: none;
-    outline: none;
+    border: 2px solid;
     font-size: 1.5rem;
-    width: 50%;
     letter-spacing: 0.2rem;
+    outline: none;
     transition: all 1s;
+    width: 50%;
 }
 
 a .mod-button{
@@ -314,48 +226,52 @@ b{
 }
 
 #remaster{
-    background-image: url(images/mods/Republic_Fleet.png);
+    background-image: url(images/index/mods/Republic_Fleet.png);
 }
 
 #rezzed{
-    background-image: url(images/mods/Star_Wars_Battlefront_II_2005_Screenshot_2019.01.10_-_22.51.09.36.png);
+    background-image: url(images/index/mods/Star_Wars_Battlefront_II_2005_Screenshot_2019.01.10_-_22.51.09.36.png);
 }
 
 #ism{
-    background-image: url(images/mods/BattlefrontII_2018-05-16_16-18-53.png);
+    background-image: url(images/index/mods/BattlefrontII_2018-05-16_16-18-53.png);
+}
+
+.responsive-rezzed{
+    display: none;
 }
 
 /*GALERIA*/
 
 .contenedor{
+    background-color: #202020;
+    border-radius: 10px;
     display: grid;
     gap: 1rem;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(5, 1fr);
     grid-template-areas: "img1 img1 img1 img2 img2 img3"
                 "img1 img1 img1 img2 img2 img3"
                 "img6 img6 gallery-button img4 img4 img3"
                 "img6 img6 img7 img4 img4 img9"
                 "img6 img6 img7 img8 img8 img9";
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     height: 90vh;
     margin: 0;
     padding: 1rem;
-    background-color: #202020;
     width: 90vw;
-    border-radius: 10px;
 }
 
 .contenedor .galeria{
-    height: auto;
     border-radius: 10px;
+    height: auto;
 }
 
 .blur{
-    height: 100%;
+    align-items: center;
     border: none;
     display: none;
-    align-items: center;
     justify-content: center;
+    height: 100%;
 }
 
 .blur p{
@@ -363,17 +279,17 @@ b{
 }
 
 .blur:hover{
-    background-color: rgba(0, 0, 0, 0.75);
-    font-size: 2rem;
-    color: white;
-    border-radius: 10px;
     backdrop-filter: blur(3px);
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
+    color: white;
+    font-size: 2rem;
 }
 
 .contenedor .galeria:hover .blur{
+    cursor: pointer;
     display: flex;
     transition-duration: 0.5s;
-    cursor: pointer;
 }
 
 .gallery-button{
@@ -382,49 +298,49 @@ b{
 }
 
 .gallery-button button{
-    height: 100%;
-    width: 100%;
-    font-size: 2rem;
     background: none;
     color:white;
+    font-size: 2rem;
+    height: 100%;
     outline: none;
     transition: all 1s;
+    width: 100%;
 }
 
 .gallery-button button:hover{
+    background: #0275d8;
     border: none;
     box-shadow: 5px 5px 5px 10px #090909;
-    background: #0275d8;
 }
 
 .responsive-button{
     display: flex;
     justify-content: center;
-    width: 100%;
-    position: relative;
     margin: 3rem 0;
+    position: relative;
+    width: 100%;
 }
 
 .responsive-button button{
-    border: none;
     align-items: center;
-    justify-content: center;
-    transition: all 0.5s;
-    padding: 1.75rem;
-    background-color: #0275d8;
-    color: white;
-    animation-name: latente;
     animation-duration: 2s;
     animation-iteration-count: infinite;
+    animation-name: latente;
+    background-color: #0275d8;
+    border: none;
+    color: white;
     display: none;
+    justify-content: center;
+    padding: 1.75rem;
+    transition: all 0.5s;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-tap-highlight-color: transparent;
 }
 
 .responsive-button button p{
+    color: white;
     font-size: 2rem;
     margin: 0.5rem;
-    color: white;
 }
 
 @keyframes latente{
@@ -434,31 +350,31 @@ b{
 }
 
 .contenedor > .img1{
-    grid-area: img1;
-    background-image: url("images/gallery/Lucrehulk.png");
-    background-size: cover;
+    background-image: url("images/index/gallery/Lucrehulk.png");
     background-position: center;
+    background-size: cover;
+    grid-area: img1;
 }
 
 .contenedor> .img2{
-    grid-area: img2;
-    background-image: url("images/gallery/Yavin_Space_Remaster.png");
-    background-size: cover;
+    background-image: url("images/index/gallery/Yavin_Space_Remaster.png");
     background-position: center;
+    background-size: cover;
+    grid-area: img2;
 }
 
 .contenedor > .img3{
-    grid-area: img3;
-    background-image: url("images/gallery/Jango.png");
-    background-size: cover;
+    background-image: url("images/index/gallery/Jango.png");
     background-position: center;
+    background-size: cover;
+    grid-area: img3;
 }
 
 .contenedor > .img4{
-    grid-area: img4;
-    background-image: url("images/gallery/Star_Wars_Battlefront_II_2005_Screenshot_2019.01.01_-_20.53.03.05.png");
-    background-size: cover;
+    background-image: url("images/index/gallery/Star_Wars_Battlefront_II_2005_Screenshot_2019.01.01_-_20.53.03.05.png");
     background-position: center;
+    background-size: cover;
+    grid-area: img4;
 }
 
 .contenedor > .gallery-button{
@@ -466,31 +382,31 @@ b{
 }
 
 .contenedor > .img6{
-    grid-area: img6;
-    background-image: url("images/gallery/Star_Wars_Battlefront_II_2005_Screenshot_2019.12.17_-_14.46.41.04.png");
-    background-size: cover;
+    background-image: url("images/index/gallery/Star_Wars_Battlefront_II_2005_Screenshot_2019.12.17_-_14.46.41.04.png");
     background-position: center;
+    background-size: cover;
+    grid-area: img6;
 }
 
 .contenedor > .img7{
-    grid-area: img7;
-    background-image: url("images/gallery/Vader_-_Battlefront_2_Remaster.png");
-    background-size: cover;
+    background-image: url("images/index/gallery/Vader_-_Battlefront_2_Remaster.png");
     background-position: center;
+    background-size: cover;
+    grid-area: img7;
 }
 
 .contenedor > .img8{
-    grid-area: img8;
-    background-image: url("images/gallery/BattlefrontII_2018-01-29_23-15-46.png");
-    background-size: cover;
+    background-image: url("images/index/gallery/BattlefrontII_2018-01-29_23-15-46.png");
     background-position: center;
+    background-size: cover;
+    grid-area: img8;
 }
 
 .contenedor > .img9{
-    grid-area: img9;
-    background-image: url("images/gallery/Star_Wars_Battlefront_II_2005_Screenshot_2019.10.07_-_13.05.41.05.png");
-    background-size: cover;
+    background-image: url("images/index/gallery/Star_Wars_Battlefront_II_2005_Screenshot_2019.10.07_-_13.05.41.05.png");
     background-position: center;
+    background-size: cover;
+    grid-area: img9;
 }
 
 
@@ -502,16 +418,16 @@ b{
 
 .cards{
     display: flex;
-    width: 100%;
-    justify-content: space-around;
     flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
 }
 
 .card{
-    width: 25%;
     background-color: #202020;
     border-radius: 10px;
     margin: 1rem;
+    width: 25%;
 }
 
 h3{
@@ -519,8 +435,8 @@ h3{
 }
 
 .icono-redes{
-    padding: 1.25rem;
     font-size: 8rem;
+    padding: 1.25rem;
     transition: all 0.75s;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-tap-highlight-color: transparent;
@@ -559,66 +475,6 @@ h3{
     text-align: right;
 }
 
-/*FOOTER*/
-
-.container-footer{
-    display: flex;
-    height: 12vh;
-    background-color: #202020;
-    text-align: center;
-    flex-direction: column;
-    justify-content: center;
-    padding: 1rem;
-}
-
-.container-footer > *{
-    padding: 0.25rem 0;
-}
-
-h4{
-    font-size: 1.25rem;
-    margin: 0.5rem 0;
-}
-
-.iconos-pers{
-    font-size: 2rem;
-}
-
-.iconitos{
-    padding: 1rem;
-    margin: 0 0.5rem;
-    transition: all 1s;
-    border-radius: 10px;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    -webkit-tap-highlight-color: transparent;
-}
-
- .fa-linkedin:hover{
-    transform: scale(1.15);
-    background-color: white;
-    border-radius: 50%;
-    color: #0e76a8;
-}
-
-.fa-envelope:hover{
-    transform: scale(1.15);
-    background-color: white;
-    border-radius: 50%;
-    color: #cc5500;
-}
-
-.fa-github:hover{
-    transform: scale(1.15);
-    background-color: white;
-    border-radius: 50%;
-    color: #333;
-}
-
-.separador{
-    width: 25%;
-    padding: 0;
-}
-
 /*MEDIA*/
 
 @media (max-width: 1200px){
@@ -626,22 +482,18 @@ h4{
         padding: 0rem;
     }
 
-    .main:hover a{
-        animation: none;
-    }
     .watch-trailer{
         background-color: #ffe81f;
         color: #202020;
         transition: all 0s;
     }
+
     .watch-trailer:hover{
         background-color:  #ffe81f;
         box-shadow: none;
         color: #202020;
     }
-    li{
-        padding: 0.6rem 3rem;
-    }
+
     .contenedor .galeria:hover .blur{
         display: none;
     }
@@ -653,6 +505,7 @@ h4{
         "img6 img6 img6 img4 img4 img4"
         "img6 img6 img6 img4 img4 img4";
     }
+
     .gallery-button, .img3, .img7, .img8, .img9{
         display: none;
     }
@@ -675,21 +528,36 @@ h4{
         background-color: #916d44;
         color: white;
     }
+
+    .hide-ism{
+        display: none;
+    }
+
+    .responsive-rezzed{
+        display: block;
+    }
+
+    .hide-rezzed{
+        display: none;
+    }
 }
 
 @media (max-width: 1000px){
     html{
         font-size: 14px;
     }
+
     section, .mod{
         height: 50vh;
     }
+
     .cards{
         align-items: flex-start;
     }
+
     .title-container{
-        width: 75%;
         box-shadow: 0px 0px 10px 10px black;
+        width: 75%;
     }
 
     #rezzed .title-container{
@@ -699,6 +567,7 @@ h4{
     .video-container{
         display: none;
     }
+
     .info-redes{
         display: none;
     }
@@ -711,64 +580,28 @@ h4{
         font-size: 2.25rem;
         margin: 1rem;
     }
-}
 
-@media (max-width: 900px){
-    .navbar{
-        padding: 0 3rem;
-    }
-    #burger{
+    .hide-ism{
         display: block;
     }
-    li{
-        font-size: 1.75rem;
-        padding: 0;
-        height: auto;
-    }
-    #burger{
-        font-size: 1.25rem;
-    }
-    .nav-elem{
-        margin: 0;
-        position: absolute;
-        right: 0px;
-        height: 95vh;
-        top: 5vh;
-        display: flex;
-        flex-direction: column-reverse;
-        width: 45%;
-        align-items: center;
-        justify-content: space-around;
-        background-color: #202020;
-        padding: 0;
-        transform: translateX(100%);
-    }
-    li:hover{
-        background-color: #202020;
-        color: white;
+
+    .responsive-rezzed{
+        display: none;
     }
 
-    .main:hover a{
-        animation: none;
+    .hide-rezzed{
+        display: block;
     }
-    
-    .main a:checked {
-        background-color: #404040;
-    }
-
-    .separador{
-        width: 40%;
+    .contenedor{
+        height: 45vh;
     }
 }
 
 @media (max-width: 768px){
-    .contenedor{
-        height: 45vh;
-    }
     
     .responsive-button button{
-        padding: 1.75rem;
         font-size: 1.25rem;
+        padding: 1.75rem;
     }
 }
 
@@ -791,8 +624,6 @@ h4{
     }
     .contenedor{
         height: auto;
-        grid-template-rows: repeat(8, 100px);
-        grid-template-columns: repeat(2, 1fr);
         grid-template-areas: "img1 img1"
                             "img1 img1"
                             "img2 img2"
@@ -801,13 +632,15 @@ h4{
                             "img4 img4"
                             "img6 img6"
                             "img6 img6";
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(8, 100px);
 
                  
     }
 
     .responsive-button button{
-        padding: 1rem;
         font-size: 1rem;
+        padding: 1rem;
     }
 
     #redes{
@@ -834,6 +667,7 @@ h4{
     .title-container{
         width: 50%;
     }
+
     .title-container p{
         display: none;
     }
@@ -843,11 +677,9 @@ h4{
     .title-container{
         width: 60%;
     }
+
     #redes{
         padding: 1rem;
-    }
-    .separador{
-        width: 50%;
     }
 }
 
@@ -855,33 +687,38 @@ h4{
     header > *{
         width: 60%;
     }
+
     .icono-redes{
         font-size: 5rem;
     }
+
     .responsive-button button{
         padding: 1rem;
     }
+
     .responsive-button button p{
         font-size: 1.5rem;
         margin: 0.5rem;
     }
+
     .card{
         width: 60%;
     }
+
     h3{
         font-size: 2rem;
     }
+
     .icono-redes{
         font-size: 6rem;
     }
+
     h1{
         font-size: 2.5rem;
     }
+
     h2{
         font-size: 2.5rem;
-    }
-    .nav-elem{
-        width: 100%;
     }
 }
 
@@ -889,6 +726,7 @@ h4{
     html{
         font-size: 11px;
     }
+    
     h1{
         font-size: 2rem;
     }
