@@ -144,15 +144,9 @@ button{
 
 .title-container{
     align-items: center;
-    background-color: rgba(20, 20, 20, 0.7);
-    border-radius: 10px;
-    box-shadow: -10px 10px 10px 8px black;
+    background-color: rgba(20, 20, 20, 0.5);
     padding: 1.2rem;
     width: 25%;
-}
-
-#rezzed .title-container {
-    box-shadow: 10px 10px 10px 8px black;
 }
 
 .title-container > *{
@@ -413,6 +407,7 @@ b{
 /*REDES*/
 
 #redes{
+    height: 66vh;
     padding: 2rem;
 }
 
@@ -428,6 +423,7 @@ b{
     border-radius: 10px;
     margin: 1rem;
     width: 25%;
+    padding-bottom: 5rem;
 }
 
 h3{
@@ -461,6 +457,7 @@ h3{
 
 .info-redes{
     padding: 1.5rem;
+    display: none;
 }
 
 .info-redes > *{
@@ -477,23 +474,60 @@ h3{
 
 /*MEDIA*/
 
+@media (max-width: 3840px){
+    html{
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 2048px)
+{
+    html{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1920px){
+    html{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1366px){
+    .card{
+        padding-bottom: 3rem;
+    }
+    
+    .hide-ism{
+        display: none;
+    }
+    
+    .responsive-rezzed{
+        display: block;
+    }
+    
+    .hide-rezzed{
+        display: none;
+    }
+}
+
 @media (max-width: 1200px){
     #redes{
         padding: 0rem;
     }
-
+    
     .watch-trailer{
         background-color: #ffe81f;
         color: #202020;
         transition: all 0s;
     }
-
+    
     .watch-trailer:hover{
         background-color:  #ffe81f;
         box-shadow: none;
         color: #202020;
     }
-
+    
     .contenedor .galeria:hover .blur{
         display: none;
     }
@@ -505,7 +539,7 @@ h3{
         "img6 img6 img6 img4 img4 img4"
         "img6 img6 img6 img4 img4 img4";
     }
-
+    
     .gallery-button, .img3, .img7, .img8, .img9{
         display: none;
     }
@@ -513,7 +547,7 @@ h3{
     .responsive-button button{
         display: flex;
     }
-
+    
     #purple{
         background-color: #724491;
         color: white;
@@ -529,17 +563,6 @@ h3{
         color: white;
     }
 
-    .hide-ism{
-        display: none;
-    }
-
-    .responsive-rezzed{
-        display: block;
-    }
-
-    .hide-rezzed{
-        display: none;
-    }
 }
 
 @media (max-width: 1000px){
@@ -598,11 +621,32 @@ h3{
 }
 
 @media (max-width: 768px){
-    
     .responsive-button button{
-        font-size: 1.25rem;
-        padding: 1.75rem;
+        font-size: 1rem;
+        padding: 1.25rem;
     }
+
+    .title-container h2{
+        padding: 0;
+        font-size: 2rem;
+    }
+
+    .title-container{
+        width: 60%;
+    }
+
+    .hide-rezzed{
+        margin: 0;
+    }
+
+    h3{
+        font-size: 1.75rem;
+    }
+
+    .icono-redes{
+        font-size: 7rem;
+    }
+
 }
 
 @media (max-width: 700px){
