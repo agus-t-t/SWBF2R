@@ -18,7 +18,6 @@ body{
     align-items: center;
     display: flex;
     flex-direction: column;
-    font-size: 20px;
     padding: 5rem;
 }
 
@@ -44,6 +43,37 @@ img:hover{
 }
 
 /*MEDIA*/
+
+@media (max-width: 3840px){
+    html{
+        font-size: 22px;
+    }
+
+    #cuerpo{
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 2048px)
+{
+    html{
+        font-size: 20px;
+    }
+
+    #cuerpo{
+        font-size: 23px;
+    }
+}
+
+@media (max-width: 1920px){
+    html{
+        font-size: 16px;
+    }
+
+    #cuerpo{
+        font-size: 20px;
+    }
+}
 
 @media (max-width: 1200px){
     .highlight{
